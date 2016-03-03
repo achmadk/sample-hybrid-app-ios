@@ -62,13 +62,13 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.inems.ios"
         },
-        "cordova-plugin-file": {
+        "cordova-plugin-wkwebview-engine": {
             "PACKAGE_NAME": "com.inems.ios"
         },
         "cordova-plugin-file-transfer": {
             "PACKAGE_NAME": "com.inems.ios"
         },
-        "cordova-plugin-wkwebview-engine": {
+        "cordova-plugin-file": {
             "PACKAGE_NAME": "com.inems.ios"
         }
     },

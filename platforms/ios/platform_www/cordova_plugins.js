@@ -33,6 +33,14 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
+        "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
+        "pluginId": "cordova-plugin-wkwebview-engine",
+        "clobbers": [
+            "cordova.exec"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "id": "cordova-plugin-file.DirectoryEntry",
         "pluginId": "cordova-plugin-file",
@@ -177,6 +185,12 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-file/www/browser/isChrome.js",
+        "id": "cordova-plugin-file.isChrome",
+        "pluginId": "cordova-plugin-file",
+        "runs": true
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/ios/FileSystem.js",
         "id": "cordova-plugin-file.iosFileSystem",
         "pluginId": "cordova-plugin-file",
@@ -214,18 +228,17 @@ module.exports = [
         "clobbers": [
             "window.FileTransfer"
         ]
-    },
-    {
-        "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
-        "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
-        "pluginId": "cordova-plugin-wkwebview-engine",
-        "clobbers": [
-            "cordova.exec"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
-{}
+{
+    "cordova-plugin-whitelist": "1.0.0",
+    "cordova-plugin-console": "1.0.1",
+    "cordova-plugin-crosswalk-webview": "1.3.1",
+    "cordova-plugin-device": "1.0.1",
+    "cordova-plugin-file": "4.1.1",
+    "cordova-plugin-file-transfer": "1.5.0"
+}
 // BOTTOM OF METADATA
 });

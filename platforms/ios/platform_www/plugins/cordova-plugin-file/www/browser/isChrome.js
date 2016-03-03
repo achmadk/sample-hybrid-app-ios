@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-file.iosFileSystem", function(require, exports, module) {
+cordova.define("cordova-plugin-file.isChrome", function(require, exports, module) {
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -18,16 +18,12 @@ cordova.define("cordova-plugin-file.iosFileSystem", function(require, exports, m
  * specific language governing permissions and limitations
  * under the License.
  *
-*/
+ */
 
-FILESYSTEM_PROTOCOL = "cdvfile";
-
-module.exports = {
-    __format__: function(fullPath) {
-        var path = ('/'+this.name+(fullPath[0]==='/'?'':'/')+FileSystem.encodeURIPath(fullPath)).replace('//','/');
-        return FILESYSTEM_PROTOCOL + '://localhost' + path;
-    }
+module.exports = function () {
+    // window.webkitRequestFileSystem and window.webkitResolveLocalFileSystemURL are available only in Chrome and
+    // possibly a good flag to indicate that we're running in Chrome
+    return window.webkitRequestFileSystem && window.webkitResolveLocalFileSystemURL;
 };
-
 
 });
