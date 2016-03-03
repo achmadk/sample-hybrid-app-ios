@@ -13,6 +13,14 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"CDVKeyboard\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<preference name=\"AndroidPersistentFileLocation\" value=\"Internal\" />",
                             "count": 1
                         },
@@ -21,23 +29,15 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"CDVWKWebViewEngine\"><param name=\"ios-package\" value=\"CDVWKWebViewEngine\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<preference name=\"CordovaWebViewEngine\" value=\"CDVWKWebViewEngine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"CDVKeyboard\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -49,22 +49,22 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.inems.ios"
         },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.inems.ios"
-        },
-        "cordova-plugin-wkwebview-engine": {
-            "PACKAGE_NAME": "com.inems.ios"
-        },
         "cordova-plugin-keyboard": {
-            "PACKAGE_NAME": "com.inems.ios"
-        },
-        "cordova-plugin-file-transfer": {
             "PACKAGE_NAME": "com.inems.ios"
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.inems.ios"
         },
         "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.inems.ios"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.inems.ios"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.inems.ios"
+        },
+        "cordova-plugin-wkwebview-engine": {
             "PACKAGE_NAME": "com.inems.ios"
         }
     },
@@ -84,6 +84,22 @@
             "pluginId": "cordova-plugin-console",
             "clobbers": [
                 "console"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-keyboard/www/keyboard.js",
+            "id": "cordova-plugin-keyboard.keyboard",
+            "pluginId": "cordova-plugin-keyboard",
+            "clobbers": [
+                "window.Keyboard"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
             ]
         },
         {
@@ -254,22 +270,6 @@
             "runs": true
         },
         {
-            "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
-            "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
-            "pluginId": "cordova-plugin-wkwebview-engine",
-            "clobbers": [
-                "cordova.exec"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-keyboard/www/keyboard.js",
-            "id": "cordova-plugin-keyboard.keyboard",
-            "pluginId": "cordova-plugin-keyboard",
-            "clobbers": [
-                "window.Keyboard"
-            ]
-        },
-        {
             "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
             "id": "cordova-plugin-file-transfer.FileTransferError",
             "pluginId": "cordova-plugin-file-transfer",
@@ -286,11 +286,11 @@
             ]
         },
         {
-            "file": "plugins/cordova-plugin-device/www/device.js",
-            "id": "cordova-plugin-device.device",
-            "pluginId": "cordova-plugin-device",
+            "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
+            "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
+            "pluginId": "cordova-plugin-wkwebview-engine",
             "clobbers": [
-                "device"
+                "cordova.exec"
             ]
         }
     ],
