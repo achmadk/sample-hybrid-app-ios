@@ -1,0 +1,157 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner sliding">
+        <div class="left">
+            <a href="#" class="back link"> <i class="icon icon-back"></i><span>Kembali</span></a>
+        </div>
+        <div class="center">Nota Dinas Baru</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <!-- Page, data-page contains page name-->
+    <div data-page="memo-form" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block-title">Identitas Pengirim</div>
+            <div class="list-block media-list">
+                <ul>
+                    <li>
+                        <div class="item-content sender-info"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block-title">Informasi Nota Dinas <span class="color-red">(* Wajib Diisi)</span></div>
+            <form id="form-memo" method="post" enctype="multipart/form-data">
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <!-- <div class="item-title label">Kepada</div> -->
+                                    <div class="item-input">
+                                        <input name="kepada" type="text" placeholder="Kepada" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Cari tujuan" data-back-text="Kembali"> -->
+                            <a href="#" id="tujuan" class="item-link item-content autocomplete-opener">
+                                <!-- <div class="item-content"> -->
+                                    <input type="hidden" name="tujuan" />
+                                    <div class="item-inner">
+                                        <div class="item-title label">Tujuan <span class="color-red">*</span></div>
+                                        <div class="item-after">
+                                        <!-- <div class="item-input">
+                                            <select name="tujuan" class="create-receiver-lists-id" required="required" multiple="multiple">
+                                                <option data-option-image="http://lorempixel.com/29/29/" value="0" disabled="disabled">Pilih Penerima</option>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                            </a>
+                        </li>
+                        <li>
+                            <!-- <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Cari tembusan" data-back-text="Kembali"> -->
+                            <a href="#" id="tembusan" class="item-link item-content autocomplete-opener">
+                                <!-- <div class="item-content"> -->
+                                    <input type="hidden" name="tembusan" />
+                                    <div class="item-inner">
+                                        <div class="item-title label">Tembusan</div>
+                                        <div class="item-after">
+                                        <!-- <div class="item-input">
+                                            <select name="tembusan" class="create-receiver-lists-id" required="required" multiple="multiple">
+                                                <option data-option-image="http://lorempixel.com/29/29/" value="0" disabled="disabled">Pilih Penerima</option>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                            </a>
+                        </li>
+                        <!--                         <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Nomor Surat</div>
+                                    <div class="item-input">
+                                        <input name="nomorSurat" type="text" placeholder="Tulis nomor surat" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+ -->
+                        <li class="align-top">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <!-- <div class="item-title label">Perihal <span class="color-red">*</span></div> -->
+                                    <div class="item-input">
+                                        <textarea name="perihal" class="resizable" placeholder="Perihal *" required="required"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--                         <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Tanggal Surat</div>
+                                    <div class="item-input">
+                                        <input name="tanggal" id="calendar-input" type="text" placeholder="Pilih tanggal surat" readonly="readonly" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+ -->
+                        <li>
+                            <a href="#" class="item-link smart-select" data-back-text="Kembali">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Sifat <span class="color-red">*</span></div>
+                                        <div class="item-input">
+                                            <select name="sifat" class="create-mail-attr-lists" required="required">
+                                                <option value="0" disabled="disabled" selected="selected">Pilih Sifat</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="align-top">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <!-- <div class="item-title label">Isi </div> -->
+                                    <div class="item-input">
+                                        <textarea name="isi" class="resizable" placeholder="Isi" required="required"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <!-- <div class="item-title label">Lampiran</div> -->
+                                    <div class="item-input">
+                                        <a class="button file-button color-blue external">
+                                            <input name="lampiran" type="file" placeholder="Pilih Lampiran" required="required" /> Unggah Lampiran
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <p >Nama <em>file</em> lampiran tidak boleh ada spasi. Format <em>file</em> lampiran yang diterima : .doc, .docx, .xls, .xlsx, .pdf, .jpg, .bmp, .zip, atau .rar</p>
+                </div>
+                <div class="content-block">
+                    <a href="#" class="button button-big button-fill link send-memo-form">
+                        Kirim
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

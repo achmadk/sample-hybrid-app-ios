@@ -1,0 +1,148 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner sliding">
+        <div class="left">
+            <a href="#" class="back link"> <i class="icon icon-back"></i><span>Kembali</span></a>
+        </div>
+        <div class="center">Disposisi Baru</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-fixed navbar-through">
+    <!-- Page, data-page contains page name-->
+    <div data-page="disp-form" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block-title">Informasi Disposisi <span class="color-red">(Wajib Diisi)</span></div>
+            <form id="form-disp" method="post" enctype="multipart/form-data">
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <!-- <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Cari Penerima" data-back-text="Kembali"> -->
+                                <a href="#" id="tujuan" class="item-link item-content autocomplete-opener">
+                                <!-- <div class="item-content"> -->
+                                    <!--                                <div class="item-media">
+                                        <i class="icon material-icons color-blue">&#xE851;</i>
+                                    </div>
+      -->
+                                    <input type="hidden" name="tujuan" />
+                                    <div class="item-inner">
+                                        <div class="item-title label">Tujuan <span class="color-red">*</span></div>
+                                        <div class="item-after">
+                                        <!-- <div class="item-input">
+                                            <select name="tujuan" class="create-receiver-lists-id" multiple="multiple">
+                                                <option value="0" disabled="disabled" data-option-image="http://lorempixel.com/29/29/">Pilih Penerima</option>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                            </a>
+                        </li>
+                        <li>
+                            <!-- <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Cari Penerima" data-back-text="Kembali"> -->
+                            <a href="#" id="tembusan" class="item-link item-content autocomplete-opener">
+                                <!-- <div class="item-content"> -->
+                                    <!--                                <div class="item-media">
+                                        <i class="icon material-icons color-blue">&#xE851;</i>
+                                    </div>
+      -->
+                                    <input type="hidden" name="tembusan" />
+                                    <div class="item-inner">
+                                        <div class="item-title label">Tembusan</div>
+                                        <div class="item-after">
+                                        <!-- <div class="item-input">
+                                            <select name="tembusan" class="create-receiver-lists-id" multiple="multiple">
+                                                <option value="0" disabled="disabled" data-option-image="http://lorempixel.com/29/29/">Pilih Penerima</option>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-link smart-select" data-back-text="Kembali">
+                                <div class="item-content">
+                                    <!--                                     <div class="item-media">
+                                        <i class="icon material-icons color-blue">&#xE002;</i>
+                                    </div>
+ -->
+                                    <div class="item-inner">
+                                        <div class="item-title label">Instruksi <span class="color-red">*</span></div>
+                                        <div class="item-input">
+                                            <select name="instruksi" class="create-disp-instr-lists" required="required">
+                                                <option value="0" disabled="disabled" selected="selected">Pilih Instruksi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-link smart-select" data-back-text="Kembali">
+                                <div class="item-content">
+                                    <!--                                     <div class="item-media">
+                                        <i class="icon material-icons color-blue">&#xE002;</i>
+                                    </div>
+ -->
+                                    <div class="item-inner">
+                                        <div class="item-title label">Sifat <span class="color-red">*</span></div>
+                                        <div class="item-input">
+                                            <select name="sifat" class="create-mail-attr-lists" required="required">
+                                                <option value="0" disabled="disabled" selected="selected">Pilih Sifat</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="align-top">
+                            <div class="item-content">
+                                <!--                                 <div class="item-media">
+                                    <i class="icon material-icons color-blue">&#xE0B7;</i>
+                                </div>
+ -->
+                                <div class="item-inner">
+                                    <!-- <div class="item-title label">Deskripsi</div> -->
+                                    <div class="item-input">
+                                        <textarea name="deskripsi" class="resizable" placeholder="Deskripsi" required="required"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <!--                                 <div class="item-media">
+                                    <i class="icon material-icons color-blue">&#xE8DF;</i>
+                                </div>
+ -->
+                                <div class="item-inner">
+                                    <!-- <div class="item-title label">Batas Waktu</div> -->
+                                    <div class="item-input">
+                                        <input name="batasWaktu" id="calendar-input" type="text" placeholder="Pilih batas waktu" readonly="readonly" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <a href="#" class="button button-big button-fill link send-disp-form">
+                        Kirim Disposisi
+                    </a>
+                </div>
+            </form>
+        </div>
+        <!--         <div class="toolbar tabbar tabbar-labels">
+            <div class="toolbar-inner">
+                <a href="#" class="link color-blue send-mail-form" data-force="true">
+                    <i class="icon material-icons">send</i>
+                    <span class="tabbar-label">Kirim</span>
+                </a>
+            </div>
+        </div>
+ --></div>
+</div>

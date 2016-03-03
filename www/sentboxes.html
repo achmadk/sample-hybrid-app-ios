@@ -1,0 +1,50 @@
+<div class="navbar">
+    <div class="navbar-inner sliding">
+        <div class="left">
+            <a href="#" class="back link"><i class="icon icon-back icon-only"></i>Kembali</a>
+        </div>
+        <div class="center">Komponen Terkirim</div>
+        <div class="right">
+            <a href="#" data-panel="left" class="link open-panel icon-only"><i class="icon icon-bars"></i></a>
+        </div>
+        <div class="subnavbar">
+            <!-- Search bar -->
+            <form data-search-list=".list-block-search" data-search-in="a" class="searchbar searchbar-init">
+                <div class="searchbar-input">
+                    <input type="search" placeholder="Cari surat terkirim" />
+                    <a href="#" class="searchbar-clear"></a>
+                </div><a href="#" class="searchbar-cancel">Batal</a>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-fixed navbar-through toolbar-fixed">
+    <div data-page="sentboxes" class="page with-subnavbar">
+        <!-- Search bar overlay -->
+        <div class="searchbar-overlay"></div>
+        <!-- Scrollable page content-->
+        <!-- <div class="page-content hide-bars-on-scroll infinite-scroll"> -->
+        <div class="page-content hide-bars-on-scroll">
+            <!-- This block will be displayed if nothing found -->
+            <div class="content-block searchbar-not-found">
+                <p>Tidak ditemukan surat terkirim yang dicari</p>
+            </div>
+            <div class="list-block media-list disposition-out-list list-block-search searchbar-found"></div>
+            <!-- <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div> -->
+        </div>
+        <div class="toolbar tabbar tabbar-labels tab-hidden">
+            <div class="toolbar-inner">
+                <a href="mail-form.html" class="link color-blue" data-force="true">
+                    <i class="icon material-icons">&#xE158;</i>
+                    <span class="tabbar-label">Surat</span>
+                </a>
+                <a href="memo-form.html" class="link color-blue" data-force="true">
+                    <i class="icon material-icons">&#xE89c;</i>
+                    <span class="tabbar-label">Nota Dinas</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

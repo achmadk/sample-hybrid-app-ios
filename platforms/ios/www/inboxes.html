@@ -1,0 +1,49 @@
+<div class="navbar sliding">
+    <div class="navbar-inner">
+        <div class="center">
+            <div class="buttons-row">
+                <a class="button tab-link active" href="#inbox">Kotak Masuk</a>
+                <a class="button tab-link" href="#dispIn">Disposisi</a>
+            </div>
+        </div>
+        <div class="right"><a href="#" data-panel="left" class="link open-panel"><i class="icon icon-bars"></i></a></div>
+        <div class="subnavbar">
+            <!-- Search bar -->
+            <form data-search-list=".list-block-search" data-search-in=".item-subtitle" class="searchbar searchbar-init sliding">
+                <div class="searchbar-input">
+                    <input type="search" placeholder="Cari surat masuk" />
+                    <a href="#" class="searchbar-clear"></a>
+                </div><a href="#" class="searchbar-cancel">Batal</a>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-fixed navbar-through">
+    <div data-page="inboxes" class="page with-subnavbar">
+        <!-- Scrollable page content-->
+        <div class="page-content hide-bars-on-scroll">
+            <!-- Search bar overlay -->
+            <div class="searchbar-overlay"></div>
+            <!-- This block will be displayed if nothing found -->
+            <div class="content-block searchbar-not-found">
+                <p>Tidak ditemukan pesan yang dicari</p>
+            </div>
+            <div class="tabs">
+                <div id="inbox" class="tab active">
+                    <div class="list-block media-list inbox-list list-block-search searchbar-found"></div>
+                </div>
+                <div id="dispIn" class="tab">
+                    <div class="list-block media-list disposition-in-list list-block-search searchbar-found"></div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar tabbar tabbar-labels tab-hidden">
+            <div class="toolbar-inner">
+                <a href="mail-form.html" class="link color-blue" data-force="true">
+                    <i class="icon material-icons">&#xE145;</i>
+                    <span class="tabbar-label">Surat Baru</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

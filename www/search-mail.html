@@ -1,0 +1,29 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>
+        <div class="center sliding">Search Mail</div>
+    </div>
+</div>
+<!-- Pages-->
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="search-mail" class="page toolbar-fixed">
+        <!-- Search bar -->
+        <form data-search-list=".list-block-search" data-search-in=".item-subtitle" class="searchbar searchbar-init">
+            <div class="searchbar-input">
+                <input type="search" placeholder="Search">
+                <a href="#" class="searchbar-clear"></a>
+            </div><a href="#" class="searchbar-cancel do-search">Search</a>
+        </form>
+        <!-- Search bar overlay -->
+        <div class="searchbar-overlay"></div>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <!-- This block will be displayed if nothing found -->
+            <div class="content-block searchbar-not-found">
+                <p>Pesan akan dicari setelah menekan tombol search</p>
+            </div>
+            <div class="list-block cards-list list-block-search searchbar-found"></div>
+        </div>
+    </div>
+</div>
